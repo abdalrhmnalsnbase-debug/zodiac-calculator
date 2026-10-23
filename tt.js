@@ -55,11 +55,11 @@ function getZodiacSign() {
     traits = 'التميز: الخيال الواسع، التعاطف العميق مع الآخرين، الرومانسية، والروح الإبداعية.';
   }
 
-  // عرض اسم البرج ومميزاته
   zodiacName.textContent = sign;
   zodiacTraits.textContent = traits;
   resultBox.classList.remove('hidden');
 }
+
 function shareWhatsApp() {
   const zodiac = document.getElementById('zodiac-name').textContent;
   const siteUrl = window.location.href;
