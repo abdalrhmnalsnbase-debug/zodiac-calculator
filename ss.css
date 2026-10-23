@@ -112,3 +112,28 @@ body {
   font-weight: 700;
   color: #ff9e00;
 }
+/* تنسيق إعلان أعلى الصفحة */
+.top-banner-ad {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.smartlink-banner {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(135deg, #ff9e00, #ff5400);
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(255, 84, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+.smartlink-banner:hover {
+  transform: translateY(-2px);
+}
