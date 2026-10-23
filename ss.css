@@ -7,7 +7,8 @@
 
 body {
   min-height: 100vh;
-  background-color: #0d0a1a;
+  /* خلفية متدرجة جذابة ونابضة بالحياة */
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,30 +18,60 @@ body {
 
 .main-card {
   width: 100%;
-  max-width: 400px;
-  background: #170f30;
-  border: 1px solid #2e1f5e;
-  border-radius: 20px;
-  padding: 30px 20px;
+  max-width: 420px;
+  background: rgba(25, 20, 45, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 24px;
+  padding: 30px 22px;
   text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+/* تنسيق إعلان أعلى الصفحة */
+.top-banner-ad {
+  margin-bottom: 22px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.smartlink-banner {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(255, 65, 108, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.smartlink-banner:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 65, 108, 0.6);
 }
 
 .header h1 {
-  font-size: 1.6rem;
-  margin-bottom: 5px;
-  color: #c8b6ff;
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  color: #00f2fe;
+  font-weight: 900;
 }
 
 .header p {
-  color: #a0a0c0;
+  color: #a3bffa;
   font-size: 0.9rem;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .inputs-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 12px;
   margin-bottom: 20px;
 }
 
@@ -52,48 +83,60 @@ body {
 
 .input-group label {
   font-size: 0.85rem;
-  color: #c8b6ff;
-  margin-bottom: 5px;
+  color: #a3bffa;
+  margin-bottom: 6px;
+  font-weight: 600;
 }
 
 .input-group input,
 .input-group select {
   width: 100%;
-  background: #231647;
-  border: 1px solid #3d277a;
-  border-radius: 10px;
-  padding: 10px;
+  background: #110e23;
+  border: 1px solid #4facfe;
+  border-radius: 12px;
+  padding: 12px;
   color: #fff;
   font-size: 0.95rem;
   outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #00f2fe;
+  box-shadow: 0 0 8px rgba(0, 242, 254, 0.3);
 }
 
 .input-group select option {
-  background: #170f30;
+  background: #19142d;
 }
 
 .submit-btn {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   border: none;
-  border-radius: 10px;
-  background: #7b2cbf;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 700;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #0d0a1a;
+  font-size: 1.05rem;
+  font-weight: 800;
   cursor: pointer;
+  box-shadow: 0 5px 15px rgba(79, 172, 254, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .submit-btn:hover {
-  background: #9d4edd;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(79, 172, 254, 0.6);
 }
 
 .result-box {
-  margin-top: 20px;
-  padding: 15px;
-  background: #231647;
-  border-radius: 12px;
-  border: 1px solid #3d277a;
+  margin-top: 22px;
+  padding: 18px;
+  background: #110e23;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  animation: fadeIn 0.4s ease-in-out;
 }
 
 .result-box.hidden {
@@ -102,48 +145,71 @@ body {
 
 .result-label {
   display: block;
-  font-size: 0.8rem;
-  color: #a0a0c0;
+  font-size: 0.85rem;
+  color: #a3bffa;
   margin-bottom: 5px;
 }
 
 .zodiac-name {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #ff9e00;
-}
-/* تنسيق إعلان أعلى الصفحة */
-.top-banner-ad {
-  margin-bottom: 20px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 2rem;
+  font-weight: 900;
+  color: #ffd700;
+  margin-bottom: 12px;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
 }
 
-.smartlink-banner {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  background: linear-gradient(135deg, #ff9e00, #ff5400);
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 700;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(255, 84, 0, 0.3);
-  transition: transform 0.2s;
-}
-
-.smartlink-banner:hover {
-  transform: translateY(-2px);
-}
+/* تنسيق مميزات البرج */
 .zodiac-traits {
   font-size: 0.9rem;
-  color: #d0c8ff;
-  background: #170f30;
-  padding: 10px;
-  border-radius: 8px;
-  margin-bottom: 15px;
+  color: #e2e8f0;
+  background: rgba(25, 20, 45, 0.8);
+  padding: 12px;
+  border-radius: 10px;
+  border-right: 4px solid #00f2fe;
+  margin-bottom: 18px;
   line-height: 1.6;
   text-align: right;
+}
+
+.share-container {
+  margin-top: 15px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.share-title {
+  font-size: 0.8rem;
+  color: #a3bffa;
+  margin-bottom: 8px;
+}
+
+.share-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.share-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.share-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.share-btn.whatsapp { background-color: #25D366; }
+.share-btn.facebook { background-color: #1877F2; }
+.share-btn.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
