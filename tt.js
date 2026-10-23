@@ -60,4 +60,26 @@ function getZodiacSign() {
   zodiacTraits.textContent = traits;
   resultBox.classList.remove('hidden');
 }
+function shareWhatsApp() {
+  const zodiac = document.getElementById('zodiac-name').textContent;
+  const siteUrl = window.location.href;
+  const text = `طلع برجي هو ${zodiac}! 🔮\nتعرف على برجك من هنا: `;
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text + siteUrl)}`, '_blank');
+}
 
+function shareFacebook() {
+  const siteUrl = window.location.href;
+  window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(siteUrl)}`, '_blank');
+}
+
+function copyInstagramText() {
+  const zodiac = document.getElementById('zodiac-name').textContent;
+  const text = `برجي هو ${zodiac}! 🔮✨`;
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(() => {
+      alert("تم نسخ النص! يمكنك لصقه في إنستغرام.");
+    });
+  } else {
+    alert("امسخ النص يدويًا: " + text);
+  }
+}
