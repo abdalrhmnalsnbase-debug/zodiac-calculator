@@ -7,25 +7,78 @@
 
 body {
   min-height: 100vh;
-  /* خلفية متدرجة جذابة ونابضة بالحياة */
-  background: linear-gradient(135deg, #1f1c2c, #928dab);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
   color: #fff;
+  position: relative;
+  overflow-x: hidden;
+
+  /* خلفية الفضاء والمجرة */
+  background: 
+    /* سديم ومجرة أرجوانية وزرقاء متدرجة */
+    radial-gradient(circle at 20% 20%, rgba(157, 78, 221, 0.4) 0%, transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(0, 242, 254, 0.3) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(123, 44, 191, 0.2) 0%, transparent 60%),
+    /* خلفية نجوم دقيقة */
+    radial-gradient(2px 2px at 20px 30px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 40px 70px, #00f2fe, rgba(0,0,0,0)),
+    radial-gradient(1.5px 1.5px at 90px 40px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 160px 120px, #ff9e00, rgba(0,0,0,0)),
+    radial-gradient(1.5px 1.5px at 230px 190px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 300px 80px, #00f2fe, rgba(0,0,0,0)),
+    #05020a;
+  background-size: 100% 100%, 100% 100%, 100% 100%, 250px 250px, 300px 300px, 200px 200px, 350px 350px, 180px 180px, 280px 280px;
+}
+
+/* 🪐 كوكب مشع في الزاوية العلوية */
+body::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ff7b00, #ff0055 70%, #2b0036);
+  box-shadow: 
+    0 0 40px rgba(255, 123, 0, 0.6),
+    inset -10px -10px 20px rgba(0, 0, 0, 0.8);
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+/* 🪐 كوكب مع حلقات في الزاوية السفلية */
+body::after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  left: -40px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #00f2fe, #4facfe 60%, #0b132b);
+  box-shadow: 
+    0 0 35px rgba(0, 242, 254, 0.5),
+    inset -8px -8px 15px rgba(0, 0, 0, 0.8);
+  opacity: 0.8;
+  pointer-events: none;
 }
 
 .main-card {
+  position: relative;
+  z-index: 10;
   width: 100%;
   max-width: 420px;
-  background: rgba(25, 20, 45, 0.95);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(15, 10, 30, 0.75);
+  border: 1px solid rgba(0, 242, 254, 0.3);
   border-radius: 24px;
   padding: 30px 22px;
   text-align: center;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(123, 44, 191, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 /* تنسيق إعلان أعلى الصفحة */
@@ -46,13 +99,13 @@ body {
   font-size: 0.9rem;
   font-weight: 700;
   border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(255, 65, 108, 0.4);
+  box-shadow: 0 0 15px rgba(255, 65, 108, 0.5);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .smartlink-banner:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 65, 108, 0.6);
+  box-shadow: 0 0 22px rgba(255, 65, 108, 0.8);
 }
 
 .header h1 {
@@ -60,10 +113,11 @@ body {
   margin-bottom: 8px;
   color: #00f2fe;
   font-weight: 900;
+  text-shadow: 0 0 12px rgba(0, 242, 254, 0.6);
 }
 
 .header p {
-  color: #a3bffa;
+  color: #c8b6ff;
   font-size: 0.9rem;
   margin-bottom: 22px;
 }
@@ -83,7 +137,7 @@ body {
 
 .input-group label {
   font-size: 0.85rem;
-  color: #a3bffa;
+  color: #c8b6ff;
   margin-bottom: 6px;
   font-weight: 600;
 }
@@ -91,24 +145,24 @@ body {
 .input-group input,
 .input-group select {
   width: 100%;
-  background: #110e23;
-  border: 1px solid #4facfe;
+  background: rgba(10, 5, 25, 0.8);
+  border: 1px solid #7b2cbf;
   border-radius: 12px;
   padding: 12px;
   color: #fff;
   font-size: 0.95rem;
   outline: none;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .input-group input:focus,
 .input-group select:focus {
   border-color: #00f2fe;
-  box-shadow: 0 0 8px rgba(0, 242, 254, 0.3);
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
 }
 
 .input-group select option {
-  background: #19142d;
+  background: #0d061f;
 }
 
 .submit-btn {
@@ -116,26 +170,27 @@ body {
   padding: 14px;
   border: none;
   border-radius: 12px;
-  background: linear-gradient(135deg, #4facfe, #00f2fe);
-  color: #0d0a1a;
+  background: linear-gradient(135deg, #7b2cbf, #00f2fe);
+  color: #fff;
   font-size: 1.05rem;
   font-weight: 800;
   cursor: pointer;
-  box-shadow: 0 5px 15px rgba(79, 172, 254, 0.4);
+  box-shadow: 0 0 18px rgba(0, 242, 254, 0.4);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .submit-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(79, 172, 254, 0.6);
+  box-shadow: 0 0 25px rgba(0, 242, 254, 0.7);
 }
 
 .result-box {
   margin-top: 22px;
   padding: 18px;
-  background: #110e23;
+  background: rgba(10, 5, 25, 0.85);
   border-radius: 16px;
-  border: 1px solid rgba(0, 242, 254, 0.3);
+  border: 1px solid rgba(0, 242, 254, 0.4);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
   animation: fadeIn 0.4s ease-in-out;
 }
 
@@ -146,23 +201,23 @@ body {
 .result-label {
   display: block;
   font-size: 0.85rem;
-  color: #a3bffa;
+  color: #c8b6ff;
   margin-bottom: 5px;
 }
 
 .zodiac-name {
   font-size: 2rem;
   font-weight: 900;
-  color: #ffd700;
+  color: #ff9e00;
   margin-bottom: 12px;
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+  text-shadow: 0 0 15px rgba(255, 158, 0, 0.6);
 }
 
 /* تنسيق مميزات البرج */
 .zodiac-traits {
   font-size: 0.9rem;
   color: #e2e8f0;
-  background: rgba(25, 20, 45, 0.8);
+  background: rgba(25, 15, 45, 0.9);
   padding: 12px;
   border-radius: 10px;
   border-right: 4px solid #00f2fe;
@@ -179,7 +234,7 @@ body {
 
 .share-title {
   font-size: 0.8rem;
-  color: #a3bffa;
+  color: #c8b6ff;
   margin-bottom: 8px;
 }
 
@@ -205,9 +260,9 @@ body {
   transform: translateY(-1px);
 }
 
-.share-btn.whatsapp { background-color: #25D366; }
-.share-btn.facebook { background-color: #1877F2; }
-.share-btn.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.share-btn.whatsapp { background-color: #25D366; box-shadow: 0 0 10px rgba(37, 211, 102, 0.4); }
+.share-btn.facebook { background-color: #1877F2; box-shadow: 0 0 10px rgba(24, 119, 242, 0.4); }
+.share-btn.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); box-shadow: 0 0 10px rgba(220, 39, 67, 0.4); }
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
