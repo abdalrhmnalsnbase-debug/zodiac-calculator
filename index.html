@@ -1,31 +1,31 @@
-<!<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="desciption" content="موقع تفاعلي سريع ومجاني يساعدك على معرفة وكتشاف برجك الفلكي السري وحظك اليوم بناء على تاريخ ميلادك بكل سهوله.">
   <meta name="keywords" content="موقع الابراج , اكتشف الابراج ,معرفة برجي ,حاسبة الابراج,حظك اليوم">
   <title>مكتشف الأبراج الفلكية</title>
-  <!-- Google Fonts: Cairo -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="ss.css">
-  <meta name="google-site-verification" content="vy_nY-J9v_CKMRN4d7LdU4A03n3VwFKjVG_WofVzE-U" />
+  <link rel="stylesheet" href="ss.css">
 </head>
 <body>
-  <main class="main-card">
- <div class="top-banner-ad">
-  <a href="https://asiafilm.org/4/14c12dacb02728175aba552373078aa6" target="_blank" class="smartlink-banner">
-        🔥 اضغط هنا لاكتشاف مفاجأة برجك اليوم!
+
+  <div class="main-card">
+
+    <!-- إعلان أعلى الصفحة -->
+    <div class="top-banner-ad">
+      <a href="https://asiafilm.org/4/14c12dacb02728175aba552373078aa6" target="_blank" class="smartlink-banner">
+        🔥 اكتشف توافق برجك وحظك اليوم حصرياً من هنا!
       </a>
-  </div>
-    <div class="header">
-      <div class="icon-header">✨</div>
-      <h1>مكتشف الأبراج</h1>
-      <p>أدخل تاريخ ميلادك لمعرفة برجك الفلكي</p>
     </div>
 
-   
+    <!-- عنوان الصفحة -->
+    <div class="header">
+      <h1>مكتشف الأبراج</h1>
+      <p>أدخل تاريخ ميلادك لمعرفة برجك ومميزات شخصيتك</p>
+    </div>
+
+    <!-- نموذج الإدخال -->
     <form id="zodiac-form" onsubmit="event.preventDefault(); getZodiacSign();">
       <div class="inputs-grid">
         <div class="input-group">
@@ -37,42 +37,35 @@
           <label for="month">الشهر</label>
           <select id="month" required>
             <option value="" disabled selected>اختر الشهر</option>
-            <option value="1">1 - يناير (يناير)</option>
-            <option value="2">2 - فبراير (شباط)</option>
-            <option value="3">3 - مارس (آذار)</option>
-            <option value="4">4 - أبريل (نيسان)</option>
-            <option value="5">5 - مايو (أيار)</option>
-            <option value="6">6 - يونيو (حزيران)</option>
-            <option value="7">7 - يوليو (تموز)</option>
-            <option value="8">8 - أغسطس (آب)</option>
-            <option value="9">9 - سبتمبر (أيلول)</option>
-            <option value="10">10 - أكتوبر (تشرين الأول)</option>
-            <option value="11">11 - نوفمبر (تشرين الثاني)</option>
-            <option value="12">12 - ديسمبر (كانون الأول)</option>
+            <option value="1">يناير</option>
+            <option value="2">فبراير</option>
+            <option value="3">مارس</option>
+            <option value="4">أبريل</option>
+            <option value="5">مايو</option>
+            <option value="6">يونيو</option>
+            <option value="7">يوليو</option>
+            <option value="8">أغسطس</option>
+            <option value="9">سبتمبر</option>
+            <option value="10">أكتوبر</option>
+            <option value="11">نوفمبر</option>
+            <option value="12">ديسمبر</option>
           </select>
         </div>
       </div>
 
-      <button type="submit" class="submit-btn">
-        <span>إظهار اسم البرج</span>
-        <div class="btn-glow"></div>
-      </button>
+      <button type="submit" class="submit-btn">إظهار اسم البرج</button>
     </form>
 
+    <!-- مربع النتيجة ومميزات البرج وأزرار المشاركة -->
     <div id="result-box" class="result-box hidden">
       <span class="result-label">برجك الفلكي هو</span>
       <div id="zodiac-name" class="zodiac-name">--</div>
-    </div>
-  </main>
-<div id="result-box" class="result-box hidden">
-      <span class="result-label">برجك الفلكي هو</span>
-      <div id="zodiac-name" class="zodiac-name">--</div>
-        </main>
-      <!-- 🌟 مكان عرض مميزات وطبيعة البرج -->
+      
+      <!-- مميزات البرج -->
       <p id="zodiac-traits" class="zodiac-traits"></p>
 
       <div class="share-container">
-        <div class="share-title">مشاركة البرج:</div>
+        <div class="share-title">مشاركة البرج مع أصدقائك:</div>
         <div class="share-buttons">
           <button type="button" onclick="shareWhatsApp()" class="share-btn whatsapp">واتساب</button>
           <button type="button" onclick="shareFacebook()" class="share-btn facebook">فيسبوك</button>
@@ -80,12 +73,9 @@
         </div>
       </div>
     </div>
+
+  </div>
+
   <script src="tt.js"></script>
 </body>
 </html>
-  
-  
-
-
-
-   
