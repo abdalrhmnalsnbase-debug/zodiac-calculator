@@ -1,0 +1,70 @@
+<!<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مكتشف الأبراج الفلكية</title>
+  <!-- Google Fonts: Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="ss.css">
+</head>
+<body>
+
+  <main class="main-card">
+    <div class="header">
+      <div class="icon-header">✨</div>
+      <h1>مكتشف الأبراج</h1>
+      <p>أدخل تاريخ ميلادك لمعرفة برجك الفلكي</p>
+    </div>
+
+   
+    <form id="zodiac-form" onsubmit="event.preventDefault(); getZodiacSign();">
+      <div class="inputs-grid">
+        <div class="input-group">
+          <label for="day">اليوم</label>
+          <input type="number" id="day" min="1" max="31" placeholder="مثال: 15" required>
+        </div>
+
+        <div class="input-group">
+          <label for="month">الشهر</label>
+          <select id="month" required>
+            <option value="" disabled selected>اختر الشهر</option>
+            <option value="1">1 - يناير (يناير)</option>
+            <option value="2">2 - فبراير (شباط)</option>
+            <option value="3">3 - مارس (آذار)</option>
+            <option value="4">4 - أبريل (نيسان)</option>
+            <option value="5">5 - مايو (أيار)</option>
+            <option value="6">6 - يونيو (حزيران)</option>
+            <option value="7">7 - يوليو (تموز)</option>
+            <option value="8">8 - أغسطس (آب)</option>
+            <option value="9">9 - سبتمبر (أيلول)</option>
+            <option value="10">10 - أكتوبر (تشرين الأول)</option>
+            <option value="11">11 - نوفمبر (تشرين الثاني)</option>
+            <option value="12">12 - ديسمبر (كانون الأول)</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">
+        <span>إظهار اسم البرج</span>
+        <div class="btn-glow"></div>
+      </button>
+    </form>
+
+    <div id="result-box" class="result-box hidden">
+      <span class="result-label">برجك الفلكي هو</span>
+      <div id="zodiac-name" class="zodiac-name">--</div>
+    </div>
+  </main>
+
+  <script src="tt.js"></script>
+</body>
+</html>
+  
+  
+
+
+
+   
