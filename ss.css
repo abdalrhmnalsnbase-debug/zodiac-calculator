@@ -137,3 +137,13 @@ body {
 .smartlink-banner:hover {
   transform: translateY(-2px);
 }
+.zodiac-traits {
+  font-size: 0.9rem;
+  color: #d0c8ff;
+  background: #170f30;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  text-align: right;
+}
