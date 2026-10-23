@@ -64,7 +64,23 @@
       <div id="zodiac-name" class="zodiac-name">--</div>
     </div>
   </main>
+<div id="result-box" class="result-box hidden">
+      <span class="result-label">برجك الفلكي هو</span>
+      <div id="zodiac-name" class="zodiac-name">--</div>
+      
+      <!-- 🌟 مكان عرض مميزات وطبيعة البرج -->
+      <p id="zodiac-traits" class="zodiac-traits"></p>
 
+      <div class="share-container">
+        <div class="share-title">مشاركة البرج:</div>
+        <div class="share-buttons">
+          <button type="button" onclick="shareWhatsApp()" class="share-btn whatsapp">واتساب</button>
+          <button type="button" onclick="shareFacebook()" class="share-btn facebook">فيسبوك</button>
+          <button type="button" onclick="copyInstagramText()" class="share-btn instagram">إنستغرام</button>
+        </div>
+      </div>
+    </div>
+   </main>
   <script src="tt.js"></script>
 </body>
 </html>
